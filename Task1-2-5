@@ -8,9 +8,10 @@ WHERE
  -- Choose only the top term each day.
  AND refresh_date >= DATE_SUB(CURRENT_DATE(), INTERVAL 1 MONTH)
  -- Filter to the last 2 weeks.
-GROUP BY week
+GROUP BY Day, Top_Term, rank, week
 ORDER BY Day DESC
  -- Show the days in reverse chronological order.
+
 
 
 
